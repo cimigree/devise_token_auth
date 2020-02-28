@@ -4,7 +4,7 @@ module DeviseTokenAuth::Concerns::ActiveRecordSupport
   extend ActiveSupport::Concern
 
   included do
-    serialize :tokens, JSON unless tokens_has_json_column_type?	    serialize :tokens, 
+    serialize :tokens, JSON unless tokens_has_json_column_type?	 
 
     # can't set default on text fields in mysql, simulate here instead.	
     after_save :set_empty_token_hash	
